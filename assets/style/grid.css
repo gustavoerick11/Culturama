@@ -1,0 +1,69 @@
+/* Inicio Banner */
+.banner {
+    display: grid;
+    gap: 1rem;
+}
+
+.banner img:nth-child(1) {
+    grid-column: 1/3; /*Significa que ele ocupa as colunas 1 e 2, o 3 não conta */
+}
+
+.banner img:nth-child(4) {
+    grid-column: 2/3; /*Significa que ele ocupa a coluna 2, o 3 não conta */
+    grid-row: 2/4; /*Significa que ele ocupa as linhas 2 e 3, o 4 não conta */
+}
+
+/* Fim Banner */
+@media (min-width: 360px) {
+    .agenda__lista {
+        display: grid;
+        row-gap: 1rem;
+    }
+    .agenda__item {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .agenda__item img {
+        grid-column: 1/3;
+    }
+    .agenda__botao {
+        text-align: center;
+    }
+} 
+@media (min-width: 720px) {
+    .banner {
+        display: grid;
+        gap: 1rem;
+    }
+    .banner img:nth-child(1) {
+         grid-column: 1/2; /*Agora ele ocupa apenas a primeira coluna */
+         grid-row: 1/3; /*E agora ocupa as linhas 1 e 2 */
+    }
+    
+    .banner img:nth-child(4) {
+        grid-column: 3/4; /*Agora ele ocupa a coluna 3 */
+        grid-row: 1/3; /*Agora ele ocupa as linhas 1 e 2 */
+    }
+    .agenda__lista {
+        display: grid;
+        row-gap: 1rem;
+        grid-template-columns: 50% 50%;
+    }
+    .agenda__item {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .agenda__item img {
+        grid-column: 1/3;
+    }
+    .agenda__botao {
+        grid-column: 2/3;
+        text-align: right;
+    }
+} 
+
+/* grid-area: 1/1/3/2 */
+/* Muito bom porque resume várias linhas em apenas uma */
+@media (min-width: 1440px) {
+    
+}
